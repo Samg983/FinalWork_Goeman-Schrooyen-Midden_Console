@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="51px" viewBox="0 0 39 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>navigation - material</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="22.1719343 4 38.3957016 43.4968394 36.840708 45 22.1719343 38.5208597 7.50316056 45 6 43.4968394"></polygon>
+        <filter x="-21.6%" y="-12.2%" width="143.2%" height="134.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.35 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Middenconsole-display" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-kleur-1" transform="translate(-86.000000, -147.000000)">
+            <g id="Group-5" transform="translate(89.000000, 143.000000)">
+                <g id="navigation---material" transform="translate(22.197851, 24.500000) rotate(17.000000) translate(-22.197851, -24.500000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#373E43" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

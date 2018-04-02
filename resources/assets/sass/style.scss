@@ -1,0 +1,115 @@
+@import "variables";
+@import "apps";
+@import "kalender";
+@import "muziek";
+@import "navigatie";
+@import "stats";
+@import "telefoon";
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.console {
+  background-color: $bg-color;
+  height: 100vh;
+}
+
+.section__padding {
+  padding: 2%;
+}
+
+#top-section {
+  height: 5vh;
+  background-color: $main-color-light;
+  color: $white;
+  text-align: center;
+}
+
+.opacity-low {
+  opacity: 0.4;
+}
+
+#middle-section {
+  height: 87.5vh;
+
+  #nav {
+    padding: 2%;
+    text-align: center;
+
+    #map {
+      height: 100%;
+    }
+  }
+
+  #middle-content {
+    padding: 0 4%;
+  }
+
+  .card {
+    margin-bottom: 2%;
+    background-color: $white;
+  }
+
+  .music-photo {
+    //background-image: url("/img/music.jpeg");
+    background-size: cover;
+
+  }
+
+  .contact-person {
+    margin: 5% 0;
+  }
+
+  .left-column {
+    border-right: 2px solid rgba(199, 197, 197, 0.52);
+    padding-left: 4%;
+    height: 100%;
+    p {
+      font-size: 1.2em;
+      padding: 5%;
+    }
+  }
+
+  .no-margin {
+    margin: 0;
+  }
+
+}
+
+.nav-block .row {
+  height: 100%;
+}
+
+.nav-form {
+  input {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $main-color-light;
+    margin-bottom: 7.5%;
+  }
+
+  button {
+    float: right;
+    padding: 1% 5%;
+    border-radius: 0;
+    background-color: $main-color-light;
+    color: $white;
+  }
+}
+
+#bottom-section {
+  height: 7.5vh;
+  background-color: $main-color-light;
+  color: $white;
+
+}
+
+.gmnoprint a, .gmnoprint span, .gmnoprint {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
+}

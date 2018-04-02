@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>star_border - material</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="contactpersoon---DONKER---grijs" transform="translate(-211.000000, -5.000000)" fill="#373E43">
+            <g id="Group-4">
+                <path d="M220.984,18.416 L224.728,20.648 L223.744,16.4 L227.08,13.472 L222.664,13.112 L220.984,9.08 L219.304,13.112 L214.888,13.472 L218.224,16.4 L217.24,20.648 L220.984,18.416 Z M230.968,12.224 L225.544,16.952 L227.176,23.984 L220.984,20.24 L214.792,23.984 L216.448,16.952 L211,12.224 L218.176,11.6 L220.984,5 L223.792,11.6 L230.968,12.224 Z" id="star_border---material"></path>
+            </g>
+        </g>
+    </g>
+</svg>

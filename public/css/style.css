@@ -1,0 +1,125 @@
+#middle-section .app {
+  background-color: #fff;
+  width: 45%;
+  margin-right: 5%;
+  margin-bottom: 1%;
+  float: left;
+}
+
+#middle-section .app img {
+  width: 50%;
+  float: left;
+}
+
+#middle-section .app p {
+  width: 50%;
+  padding: 5%;
+  float: left;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.console {
+  background-color: #E0E0E0;
+  height: 100vh;
+}
+
+.section__padding {
+  padding: 2%;
+}
+
+#top-section {
+  height: 5vh;
+  background-color: #373E43;
+  color: #fff;
+  text-align: center;
+}
+
+.opacity-low {
+  opacity: 0.4;
+}
+
+#middle-section {
+  height: 87.5vh;
+}
+
+#middle-section #nav {
+  padding: 2%;
+  text-align: center;
+}
+
+#middle-section #nav #map {
+  height: 100%;
+}
+
+#middle-section #middle-content {
+  padding: 0 4%;
+}
+
+#middle-section .card {
+  margin-bottom: 2%;
+  background-color: #fff;
+}
+
+#middle-section .music-photo {
+  background-size: cover;
+}
+
+#middle-section .contact-person {
+  margin: 5% 0;
+}
+
+#middle-section .left-column {
+  border-right: 2px solid rgba(199, 197, 197, 0.52);
+  padding-left: 4%;
+  height: 100%;
+}
+
+#middle-section .left-column p {
+  font-size: 1.2em;
+  padding: 5%;
+}
+
+#middle-section .no-margin {
+  margin: 0;
+}
+
+.nav-block .row {
+  height: 100%;
+}
+
+.nav-form input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #373E43;
+  margin-bottom: 7.5%;
+}
+
+.nav-form button {
+  float: right;
+  padding: 1% 5%;
+  border-radius: 0;
+  background-color: #373E43;
+  color: #fff;
+}
+
+#bottom-section {
+  height: 7.5vh;
+  background-color: #373E43;
+  color: #fff;
+}
+
+.gmnoprint a,
+.gmnoprint span,
+.gmnoprint {
+  display: none;
+}
+
+.gmnoprint div {
+  background: none !important;
+}
+
