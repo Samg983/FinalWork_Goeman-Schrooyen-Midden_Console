@@ -29,10 +29,19 @@ Route::get('/kalender', [
     'as' => 'kalender'
 ]);
 
-Route::get('/muziek', [
-    'uses' => 'HomeController@muziek_page',
-    'as' => 'muziek'
-]);
+
+
+Route::group(['prefix' => 'muziek'], function(){
+    Route::get('/', [
+        'uses' => 'MuziekController@muziek_page',
+        'as' => 'muziek'
+    ]);
+
+    Route::get('/radio', [
+        'uses' => 'MuziekController@radio_page',
+        'as' => 'muziek.radio'
+    ]);
+});
 
 Route::get('/navigatie', [
     'uses' => 'HomeController@navigatie_page',

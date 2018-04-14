@@ -47,21 +47,17 @@
 </head>
 <body>
 
-<div class="console">
-    @include("partials.top")
 
-    <div id="middle-section">
-        @include("partials.nav")
+@include("partials.top")
 
-        <div id="middle-content" class="row">
-            @yield("middle-content")
-        </div>
+<div id="middle-section">
+    @include("partials.nav")
 
+    <div id="middle-content" class="row">
+        @yield("middle-content")
     </div>
-
-  @include("partials.bottom")
-
-
 </div>
+
+@include("partials.bottom")
 </body>
 </html>

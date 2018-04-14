@@ -2,19 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\App;
+use App\Klimaat;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-       // $this->middleware('auth');
-    }
+
 
     /**
      * Show the application dashboard.
@@ -23,12 +17,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         return view('index');
     }
 
     public function apps_page()
     {
-        return view('apps');
+        $apps = App::all();
+        return view('apps', ['apps' => $apps]);
     }
 
     public function kalender_page()
@@ -36,10 +32,7 @@ class HomeController extends Controller
         return view('kalender');
     }
 
-    public function muziek_page()
-    {
-        return view('muziek');
-    }
+
 
     public function navigatie_page()
     {

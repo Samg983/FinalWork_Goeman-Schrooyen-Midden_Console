@@ -1,5 +1,5 @@
-<div id="bottom-section" class="row">
-    <div class="col">Temp LINKS</div>
+<div id="bottom-section" class="row" >
+    <div class="col">{{ $klimaat->temperatuurLinks }}</div>
     <div class="col-8"></div>
-    <div class="col">Temp RECHTS</div>
+    <div class="col">{{ $klimaat->temperatuurRechts }}</div>
 </div>

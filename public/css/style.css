@@ -1,4 +1,4 @@
-#middle-section .app {
+#middle-section .app-card {
   background-color: #fff;
   width: 45%;
   margin-right: 5%;
@@ -6,24 +6,20 @@
   float: left;
 }
 
-#middle-section .app img {
+#middle-section .app-card img {
   width: 50%;
   float: left;
 }
 
-#middle-section .app p {
+#middle-section .app-card p {
   width: 50%;
   padding: 5%;
   float: left;
 }
 
-html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-}
-
-.console {
   background-color: #E0E0E0;
   height: 100vh;
 }
@@ -39,8 +35,13 @@ body {
   text-align: center;
 }
 
-.opacity-low {
-  opacity: 0.4;
+.active-nav {
+  opacity: 1 !important;
+}
+
+.active-nav-muz {
+  color: purple;
+  background-color: #CAC9C9;
 }
 
 #middle-section {
@@ -50,6 +51,10 @@ body {
 #middle-section #nav {
   padding: 2%;
   text-align: center;
+}
+
+#middle-section #nav .icon {
+  opacity: 0.4;
 }
 
 #middle-section #nav #map {
@@ -76,20 +81,21 @@ body {
 #middle-section .left-column {
   border-right: 2px solid rgba(199, 197, 197, 0.52);
   padding-left: 4%;
-  height: 100%;
+  text-align: center;
 }
 
+#middle-section .left-column a,
 #middle-section .left-column p {
   font-size: 1.2em;
-  padding: 5%;
+  color: #000;
+  padding: 7.5%;
+  float: left;
+  clear: both;
+  width: 100%;
 }
 
 #middle-section .no-margin {
   margin: 0;
-}
-
-.nav-block .row {
-  height: 100%;
 }
 
 .nav-form input {
@@ -111,6 +117,7 @@ body {
   height: 7.5vh;
   background-color: #373E43;
   color: #fff;
+  text-align: center;
 }
 
 .gmnoprint a,

@@ -3,17 +3,16 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Klimaat;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+
+
+
     public function boot()
     {
-        //
+        view()->share('klimaat', Klimaat::where('klimaatId', 1)->first());
     }
 
     /**
