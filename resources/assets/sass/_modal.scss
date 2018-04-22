@@ -1,0 +1,36 @@
+@import "variables";
+
+.modal-content {
+  background-color: transparent;
+  border: 0;
+}
+
+.modal-lg {
+  max-width: 90% !important;
+}
+
+.no-btn {
+  background-color: transparent;
+  color: $white;
+  border: none;
+}
+
+.form-check-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.form-check-input:checked {
+  background-color: #1e7e34;
+}
+
+.varia-section {
+  background-color: $white;
+  margin-bottom: 3%;
+  padding: 5%;
+}

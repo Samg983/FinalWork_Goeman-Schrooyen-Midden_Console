@@ -2,14 +2,14 @@
 
 @section("middle-content")
     <div class="col-3 left-column">
-        <p>Apps</p>
+        <p class="active-nav-left-col">Apps</p>
     </div>
     <div class="col-9 right-column">
 
-        <div class="row justify-content-around">
+        <div class="row ">
             @foreach($apps as $app)
-                <div class="col-5 app-card" style="background-color: white">
-                    <img src=""/>
+                <div class="app-card">
+                    <img src="{{ asset($app->imgpath) }}"/>
                     <p>{{ $app->naam }}</p>
                 </div>
             @endforeach

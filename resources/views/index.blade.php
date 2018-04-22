@@ -3,7 +3,7 @@
 @section("middle-content")
     <div class="col-12 card nav-block">
         <div class="row">
-            <div class="col-1 section__padding"><img class="drag-icon" src="img/drag-icon.svg" alt="drag icon">
+          <div class="col-1 section__padding"><img class="drag-icon" src="img/drag-icon.svg" alt="drag icon">
             </div>
             <div id="map" class="col-3"></div>
             <div class="col-8 section__padding">
@@ -87,6 +87,17 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <ul>
+        <li>mlkkjamlzekjr</li>
+        <li>mlkkjamlzekjr</li>
+        <li>mlkkjamlzekjr</li>
+    </ul>
+
+    <div id="drop-zone" style="margin-left: 10%">
+        dropzone
     </div>
 
 @endsection

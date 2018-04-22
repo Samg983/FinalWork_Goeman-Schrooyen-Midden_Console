@@ -5,6 +5,7 @@
 @import "navigatie";
 @import "stats";
 @import "telefoon";
+@import "modal";
 
  body {
   max-width: 100%;
@@ -23,13 +24,17 @@
   background-color: $main-color-light;
   color: $white;
   text-align: center;
+  
+  a {
+    color: #fff;
+  }
 }
 
 .active-nav {
   opacity: 1 !important;
 }
 
-.active-nav-muz {
+.active-nav-left-col {
   color: purple;
   background-color: #CAC9C9;
 }
@@ -115,7 +120,7 @@
 }
 
 #bottom-section {
-  height: 7.5vh;
+  height: 5vh;
   background-color: $main-color-light;
   color: $white;
   text-align: center;

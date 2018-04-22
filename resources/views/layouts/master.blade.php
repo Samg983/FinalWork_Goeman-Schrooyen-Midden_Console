@@ -21,6 +21,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+            crossorigin="anonymous"></script>
 
     <!-- Entire bundle -->
     <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.5/lib/draggable.bundle.js"></script>
@@ -30,6 +33,11 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHVcLxTOD5M2zYPnr-mYWtxOdqqEGasaI&callback=initMap"
             async defer></script>
+    <!-- Entire bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+    <!-- legacy bundle for older browsers (IE11) -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.legacy.js"></script>
+
 
     <script src="{{ asset('js/main.js') }}"></script>
 
@@ -47,7 +55,7 @@
 </head>
 <body>
 
-
+@include("modal.varia")
 @include("partials.top")
 
 <div id="middle-section">
@@ -59,5 +67,6 @@
 </div>
 
 @include("partials.bottom")
+
 </body>
 </html>
