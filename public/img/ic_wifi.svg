@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="25px" viewBox="0 0 32 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_wifi</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M42.4074074,27.3132716 C43.8065914,25.9315775 45.4418631,24.9958872 47.3132716,24.5061728 C49.1497005,24.0339483 50.9773572,24.0339483 52.7962963,24.5061728 C54.6677048,24.9958872 56.2942318,25.9315775 57.6759259,27.3132716 L55.5246914,29.5169753 C54.5277728,28.5200567 53.3559738,27.8467096 52.0092593,27.4969136 C50.6975243,27.1646074 49.385809,27.1646074 48.0740741,27.4969136 C46.7273595,27.8467096 45.5555605,28.5200567 44.558642,29.5169753 L42.4074074,27.3132716 Z M46.7623457,31.720679 C47.3395091,31.1435156 48.0303458,30.750001 48.8348765,30.5401235 C49.6394073,30.3302459 50.443926,30.3302459 51.2484568,30.5401235 C52.0529876,30.750001 52.7438243,31.1435156 53.3209877,31.720679 L50.0416667,35 L46.7623457,31.720679 Z M38,22.9583333 C39.6440411,21.331782 41.5241664,20.0900249 43.6404321,19.2330247 C45.7042284,18.4110041 47.8466967,18 50.0679012,18 C52.2891058,18 54.4228293,18.4110041 56.4691358,19.2330247 C58.5854015,20.0900249 60.456782,21.331782 62.0833333,22.9583333 L59.8796296,25.162037 C58.5504049,23.8328123 57.0200704,22.8184191 55.2885802,22.1188272 C53.6095595,21.436725 51.8606058,21.095679 50.0416667,21.095679 C48.2227275,21.095679 46.4737738,21.436725 44.7947531,22.1188272 C43.0632629,22.8184191 41.5329285,23.8328123 40.2037037,25.162037 L38,22.9583333 Z" id="path-1"></path>
+        <filter x="-29.1%" y="-29.4%" width="158.1%" height="182.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.147248641 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---color---black" transform="translate(-34.000000, -16.000000)">
+            <g id="ic_wifi">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

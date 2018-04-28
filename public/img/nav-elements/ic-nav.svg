@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="32px" viewBox="0 0 24 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-nav</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---color---black" transform="translate(-23.000000, -68.000000)" stroke="#FFFFFF">
+            <path d="M39.5665816,68.6515888 L50.2288871,94.6090228 C50.438731,95.1198887 50.1947044,95.7041394 49.6838385,95.9139833 C49.4697938,96.0019045 49.2318822,96.0128739 49.0106553,95.9450215 L38.9337937,92.8543547 C38.7424092,92.7956553 38.5378123,92.7957472 38.3464806,92.8546185 L28.3079835,95.9433868 C27.7801213,96.1058059 27.2205377,95.8095558 27.0581186,95.2816936 C26.9900903,95.0606017 27.0008153,94.822763 27.0884668,94.6086912 L37.7161461,68.6526282 C37.925416,68.1415268 38.5093922,67.8968441 39.0204935,68.1061139 C39.2681864,68.2075314 39.4648858,68.40401 39.5665816,68.6515888 Z" id="ic-nav" transform="translate(38.659038, 82.000000) rotate(17.000000) translate(-38.659038, -82.000000) "></path>
+        </g>
+    </g>
+</svg>

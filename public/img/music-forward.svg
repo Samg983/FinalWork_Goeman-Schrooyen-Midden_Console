@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="25px" height="18px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
-    <title>fast_forward - material</title>
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>music-forward</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Middenconsole-display" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home-kleur-1" transform="translate(-575.000000, -610.000000)" fill="#373E43">
+        <g id="Home-kleur-3" transform="translate(-575.000000, -610.000000)" fill="#FFFFFF">
             <g id="Group-4" transform="translate(85.000000, 452.500000)">
-                <g id="Group-3" transform="translate(6.000000, 0.000000)">
-                    <g id="Group-2" transform="translate(275.000000, 151.000000)">
-                        <path d="M221.752131,7 L233.858153,15.5014205 L221.752131,24.0028409 L221.752131,7 Z M209,24.0028409 L209,7 L221.106023,15.5014205 L209,24.0028409 Z" id="fast_forward---material"></path>
+                <g id="Group-3" transform="translate(15.000000, 0.000000)">
+                    <g id="Group-2" transform="translate(266.000000, 151.000000)">
+                        <path d="M221.752131,7 L233.858153,15.5014205 L221.752131,24.0028409 L221.752131,7 Z M209,24.0028409 L209,7 L221.106023,15.5014205 L209,24.0028409 Z" id="music-forward"></path>
                     </g>
                 </g>
             </g>

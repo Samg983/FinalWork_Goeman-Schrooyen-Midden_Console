@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="31px" viewBox="0 0 24 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
-    <title>play_arrow - material</title>
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>music-play</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Middenconsole-display" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home-kleur-1" transform="translate(-471.000000, -603.000000)" fill="#373E43">
+        <g id="Home-kleur-3" transform="translate(-471.000000, -603.000000)" fill="#FFFFFF">
             <g id="Group-4" transform="translate(85.000000, 452.500000)">
-                <g id="Group-3" transform="translate(6.000000, 0.000000)">
-                    <g id="Group-2" transform="translate(275.000000, 151.000000)">
-                        <polygon id="play_arrow---material" points="105.273629 0 128.584524 14.8434801 105.273629 29.6869602"></polygon>
+                <g id="Group-3" transform="translate(15.000000, 0.000000)">
+                    <g id="Group-2" transform="translate(266.000000, 151.000000)">
+                        <polygon id="music-play" points="105.273629 0 128.584524 14.8434801 105.273629 29.6869602"></polygon>
                     </g>
                 </g>
             </g>

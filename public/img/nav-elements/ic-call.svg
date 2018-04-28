@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>ic-call</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home---color---black" transform="translate(-350.000000, -67.000000)" fill-rule="nonzero" stroke="#FFFFFF">
+            <path d="M367.356786,84.1497594 C364.585876,86.9206698 361.377122,89.5694319 360.10909,88.30105 C358.292966,86.485276 357.173332,84.9036486 353.170439,88.1208026 C349.167196,91.3393565 352.241902,93.4837758 354.000977,95.2435507 C356.030948,97.2731716 363.59819,95.3502991 371.077933,87.8716062 C378.556626,80.3911632 380.480898,72.8239215 378.449527,70.7932506 C376.690103,69.0338257 374.545683,65.9601697 371.328529,69.9637624 C368.110675,73.9656052 369.691603,75.0855891 371.508077,76.9017131 C372.775759,78.170095 370.127696,81.3784991 367.356786,84.1497594 Z" id="ic-call"></path>
+        </g>
+    </g>
+</svg>

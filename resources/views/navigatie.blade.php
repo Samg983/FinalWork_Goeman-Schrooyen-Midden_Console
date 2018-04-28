@@ -8,3 +8,8 @@
     </div>
     <div id="map" class="col-9"></div>
 @endsection
+
+@section("scripts")
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHVcLxTOD5M2zYPnr-mYWtxOdqqEGasaI&callback=initMap"
+            async defer></script>
+@endsection

@@ -12,9 +12,12 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="http://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
             crossorigin="anonymous"></script>
@@ -25,19 +28,11 @@
             integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
             crossorigin="anonymous"></script>
 
-    <!-- Entire bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.5/lib/draggable.bundle.js"></script>
 
-    <!-- legacy bundle for older browsers (IE11) -->
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.5/lib/draggable.bundle.legacy.js"></script>
+    @yield("scripts")
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHVcLxTOD5M2zYPnr-mYWtxOdqqEGasaI&callback=initMap"
-            async defer></script>
-    <!-- Entire bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
-    <!-- legacy bundle for older browsers (IE11) -->
-    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.legacy.js"></script>
 
+    <script src="{{ asset('js/jquery.draggable.js') }}"></script>
 
     <script src="{{ asset('js/main.js') }}"></script>
 
@@ -54,19 +49,19 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+<div id="" class="first-div">
+    @include("modal.varia")
+    @include("partials.top")
 
-@include("modal.varia")
-@include("partials.top")
+    <div id="middle-section">
+        @include("partials.nav")
 
-<div id="middle-section">
-    @include("partials.nav")
-
-    <div id="middle-content" class="row">
-        @yield("middle-content")
+        <div id="middle-content" class="row">
+            @yield("middle-content")
+        </div>
     </div>
+
+    @include("partials.bottom")
 </div>
-
-@include("partials.bottom")
-
 </body>
 </html>

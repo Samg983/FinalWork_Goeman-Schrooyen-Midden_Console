@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>contact-fav-full</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="19.968 7.224 14.544 11.952 16.176 18.984 9.984 15.24 3.792 18.984 5.448 11.952 0 7.224 7.176 6.6 9.984 0 12.792 6.6"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="contactpersoon---LICHT" transform="translate(-207.000000, -5.000000)">
+            <g id="Group-4" transform="translate(47.000000, 2.000000)">
+                <g id="contact-fav-full" transform="translate(160.000000, 3.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <rect fill="#FFFFFF" mask="url(#mask-2)" x="-2" y="-2" width="24" height="23"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

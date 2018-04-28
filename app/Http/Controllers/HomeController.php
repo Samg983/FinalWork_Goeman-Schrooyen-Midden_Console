@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\App;
+use App\Contact;
 use App\Klimaat;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,9 @@ class HomeController extends Controller
     public function index()
     {
 
-        return view('index');
+        $contacts = Contact::all()->take(3);
+
+        return view('index', ['contacts' => $contacts]);
     }
 
     public function apps_page()

@@ -20,7 +20,7 @@
 #middle-section .app-card p {
   width: 50%;
   height: 100%;
-  padding: 15%;
+  padding: 15% 5%;
   text-align: center;
   float: left;
 }
@@ -55,25 +55,33 @@
 }
 
 .varia-section {
-  background-color: #fff;
+  background: #000;
   margin-bottom: 3%;
   padding: 5%;
 }
 
-body {
+.first-div {
   max-width: 100%;
-  overflow-x: hidden;
-  background-color: #E0E0E0;
-  height: 100vh;
+  background-color: #000;
+  color: #fff;
 }
 
 .section__padding {
   padding: 2%;
 }
 
+.droppable {
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.o-min {
+  opacity: 0.3;
+}
+
 #top-section {
   height: 5vh;
-  background-color: #373E43;
+  background-color: #000;
   color: #fff;
   text-align: center;
 }
@@ -98,6 +106,7 @@ body {
 #middle-section #nav {
   padding: 2%;
   text-align: center;
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.45), transparent);
 }
 
 #middle-section #nav .icon {
@@ -114,11 +123,20 @@ body {
 
 #middle-section .card {
   margin-bottom: 2%;
-  background-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
 }
 
 #middle-section .music-photo {
   background-size: cover;
+}
+
+#middle-section .img-contact {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #middle-section .contact-person {
@@ -145,10 +163,15 @@ body {
   margin: 0;
 }
 
+.music-block {
+  cursor: move;
+}
+
 .nav-form input {
+  background-color: transparent;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid #373E43;
+  border-bottom: 1px solid #fff;
   margin-bottom: 7.5%;
 }
 
@@ -156,13 +179,13 @@ body {
   float: right;
   padding: 1% 5%;
   border-radius: 0;
-  background-color: #373E43;
+  background-color: #000;
   color: #fff;
 }
 
 #bottom-section {
   height: 5vh;
-  background-color: #373E43;
+  background-color: #000;
   color: #fff;
   text-align: center;
 }
