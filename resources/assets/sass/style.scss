@@ -7,12 +7,15 @@
 @import "telefoon";
 @import "modal";
 
-
+body, html {
+  background-color: black;
+  overflow: hidden;
+}
 .first-div {
   max-width: 100%;
-  //overflow: hidden;
+  overflow: hidden;
   background-color: $black;
-  //height: 100vh;
+  height: 100vh;
   color: $white;
 }
 
@@ -33,7 +36,11 @@
   background-color: $black;
   color: $white;
   text-align: center;
+  padding: 1.5%;
 
+  #greeting {
+    font-size: 1.3em;
+  }
   a {
     color: $white;
   }
@@ -44,8 +51,9 @@
 }
 
 .active-nav-left-col {
-  color: purple;
-  background-color: #CAC9C9;
+
+  background-color: rgba(255,255,255,0.2);
+
 }
 
 #middle-section {
@@ -54,7 +62,7 @@
   #nav {
     padding: 2%;
     text-align: center;
-    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.45), transparent);
+    background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.25), transparent);
     .icon {
       opacity: 0.4;
     }
@@ -74,9 +82,10 @@
   }
 
   .music-photo {
-    //background-image: url("/img/music.jpeg");
-    background-size: cover;
-
+    padding: 0;
+    img {
+      width: 100%;
+    }
   }
 
   .img-contact {
@@ -98,7 +107,7 @@
     text-align: center;
     a, p {
       font-size: 1.2em;
-      color: #000;
+      color: $white;
       padding: 7.5%;
       float: left;
       clear: both;
@@ -106,9 +115,21 @@
     }
   }
 
-  .right-column {
-    //background-color: deeppink;
+
+  #player {
+    margin-top: 6%;
   }
+  #suspensionCheck {
+    margin-left: 15%;
+  }
+
+  .form-check {
+    margin: 10% 0;
+  }
+
+
+
+
 
   .no-margin {
     margin: 0;
@@ -116,8 +137,26 @@
 
 }
 
+input[type="radio"] {
+
+  &:checked {
+    background-color: $black;
+  }
+}
 .nav-block .row {
   //height: 100%;
+}
+
+.heat {
+  margin-left: 10%;
+}
+
+.heat-right {
+  margin-right: 10%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .music-block {

@@ -1,15 +1,17 @@
 @extends("layouts.master")
 
 @section("middle-content")
-    @include("partials.muziek-nav")
-    <div class="col-9 right-column">
-        <div class="row">
-            @foreach($radiozenders as $zender)
-                <div class="col-12"  style="background-color: white">
+    <div class="row">
+        @include("partials.muziek-nav")
+        <div class="col-9 right-column">
+            <div class="row">
+                @foreach($radiozenders as $zender)
+                    <div class="col-12">
 
-                    <p>{{ $zender->naam }}</p>
-                </div>
-            @endforeach
+                        <p>{{ $zender->naam }}</p>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 @endsection

@@ -1,13 +1,27 @@
-import {Draggable} from '@shopify/draggable';
-import {Droppable} from '@shopify/draggable';
-
 $(document).ready(function () {
+    console.log(Cookies.getJSON());
+
     startTime();
+    let $musicBlock = $(".music-block .row");
+    let $navBlock = $(".nav-block .row");
+    let musicBlockPos, navBlockPos;
 
 
+    if(musicBlockPos = Cookies.getJSON("musicBlock")){
+        $musicBlock.css({
+            top: musicBlockPos.top,
+            left: musicBlockPos.left
+        });
+    }
 
+    if(navBlockPos = Cookies.getJSON("navBlock")){
+        console.log("top nav " + navBlockPos.top);
 
-
+        $navBlock.css({
+            top: navBlockPos.top,
+            left: navBlockPos.left
+        });
+    }
 
     $('#variaModal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget) // Button that triggered the modal
@@ -20,13 +34,60 @@ $(document).ready(function () {
     })
 
 
+    $(".large-blocks").sortable({
+        start: function (e, ui) {
+            /*console.log("start");
+            console.log(ui);
+            console.log(ui.item[0].className);*/
+        },
+        stop: function (e, ui) {
 
 
-    let card = $(".card");
+        },
+        update: function (e, ui) {
+            console.log("update");
 
-    let mainCanvas = $(".first-div");
 
-    card.draggable({
+
+            Cookies.set("musicBlock", $musicBlock.position());
+            Cookies.set("navBlock", $navBlock.position());
+
+            if (musicBlockPos = Cookies.getJSON("musicBlock")) {
+                console.log("musicBlockPos");
+                console.log(musicBlockPos.top);
+                console.log(musicBlockPos.left);
+
+                $musicBlock.css({
+                    top: musicBlockPos.top,
+                    left: musicBlockPos.left
+                });
+            }
+
+
+
+
+            if (navBlockPos = Cookies.getJSON("navBlock")) {
+                console.log("navBlockPos");
+                console.log(navBlockPos.top);
+                console.log(navBlockPos.left);
+
+
+                $navBlock.css({
+                    top: navBlockPos.top,
+                    left: navBlockPos.left
+                });
+
+
+            }
+
+            console.log(Cookies.getJSON("musicBlock"));
+            console.log(Cookies.getJSON("navBlock"));
+        }
+    });
+    $(".small-blocks").sortable();
+
+
+    /*card.draggable({
         containment: mainCanvas,
 
 
@@ -67,8 +128,7 @@ $(document).ready(function () {
                 top: dragPos.top
             });
         }
-    });
-
+    });*/
 
 
     initMap();
@@ -95,8 +155,6 @@ function checkTime(i) {
     }  // add zero in front of numbers < 10
     return i;
 }
-
-
 
 
 let map;

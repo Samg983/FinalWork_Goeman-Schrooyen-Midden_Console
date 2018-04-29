@@ -16,7 +16,7 @@
                             <div class="form-row">
                                 <div class="form-check form-check-inline col-md-4">
                                     <input class="form-check-input" type="radio" name="profile" id="inlineRadio1"
-                                           value="option1">
+                                           value="option1" checked>
                                     <label class="form-check-label" for="inlineRadio1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline col-md-4">

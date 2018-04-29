@@ -1,1 +1,13 @@
 @import "variables";
+
+
+.tracks {
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.track {
+  padding: 3%;
+  margin: 1%;
+  background: $gradient;
+}

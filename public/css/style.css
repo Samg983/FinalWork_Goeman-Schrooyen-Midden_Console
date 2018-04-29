@@ -1,5 +1,6 @@
 #middle-section .app-card {
-  background-color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
   width: 45%;
   padding: 0;
   margin: 0 2.5%;
@@ -23,6 +24,19 @@
   padding: 15% 5%;
   text-align: center;
   float: left;
+}
+
+.tracks {
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.track {
+  padding: 3%;
+  margin: 1%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
 }
 
 .modal-content {
@@ -60,9 +74,17 @@
   padding: 5%;
 }
 
+body,
+html {
+  background-color: black;
+  overflow: hidden;
+}
+
 .first-div {
   max-width: 100%;
+  overflow: hidden;
   background-color: #000;
+  height: 100vh;
   color: #fff;
 }
 
@@ -84,6 +106,11 @@
   background-color: #000;
   color: #fff;
   text-align: center;
+  padding: 1.5%;
+}
+
+#top-section #greeting {
+  font-size: 1.3em;
 }
 
 #top-section a {
@@ -95,8 +122,7 @@
 }
 
 .active-nav-left-col {
-  color: purple;
-  background-color: #CAC9C9;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 #middle-section {
@@ -106,7 +132,7 @@
 #middle-section #nav {
   padding: 2%;
   text-align: center;
-  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.45), transparent);
+  background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.25), transparent);
 }
 
 #middle-section #nav .icon {
@@ -128,7 +154,11 @@
 }
 
 #middle-section .music-photo {
-  background-size: cover;
+  padding: 0;
+}
+
+#middle-section .music-photo img {
+  width: 100%;
 }
 
 #middle-section .img-contact {
@@ -152,15 +182,41 @@
 #middle-section .left-column a,
 #middle-section .left-column p {
   font-size: 1.2em;
-  color: #000;
+  color: #fff;
   padding: 7.5%;
   float: left;
   clear: both;
   width: 100%;
 }
 
+#middle-section #player {
+  margin-top: 6%;
+}
+
+#middle-section #suspensionCheck {
+  margin-left: 15%;
+}
+
+#middle-section .form-check {
+  margin: 10% 0;
+}
+
 #middle-section .no-margin {
   margin: 0;
+}
+
+input[type="radio"]:checked {
+  background-color: #000;
+}
+
+.heat {
+  margin-left: 10%;
+}
+
+.heat-right {
+  margin-right: 10%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .music-block {
