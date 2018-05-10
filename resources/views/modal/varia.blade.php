@@ -12,35 +12,23 @@
                     </div>
                     <div class="row varia-section">
                         <h2 class="col-12">Profielen</h2>
-                        <form class="col-12">
+                        <form id="changeProfile" class="col-12" action="{{ route("driver.change") }}" method="post">
                             <div class="form-row">
-                                <div class="form-check form-check-inline col-md-4">
-                                    <input class="form-check-input" type="radio" name="profile" id="inlineRadio1"
-                                           value="option1" checked>
-                                    <label class="form-check-label" for="inlineRadio1">1</label>
-                                </div>
-                                <div class="form-check form-check-inline col-md-4">
-                                    <input class="form-check-input" type="radio" name="profile" id="inlineRadio2"
-                                           value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">2</label>
-                                </div>
-                                <div class="form-check form-check-inline col-md-4">
-                                    <input class="form-check-input" type="radio" name="profile" id="inlineRadio3"
-                                           value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">3</label>
-                                </div>
-                                <div class="form-check form-check-inline col-md-4">
-                                    <input class="form-check-input" type="radio" name="profile" id="inlineRadio4"
-                                           value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">4</label>
-                                </div>
-                                <div class="form-check form-check-inline col-md-4">
-                                    <input class="form-check-input" type="radio" name="profile" id="inlineRadio5"
-                                           value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">5</label>
-                                </div>
+                                @foreach($bestuurders as $bestuurder)
+                                    <div class="form-check form-check-inline col-md-4">
+                                        <input class="form-check-input profileInput" type="radio" name="profile" id="profile{{ $bestuurder->bestuurderId }}" title="{{ $bestuurder->bestuurderId }}"
+                                               value="{{ $bestuurder->bestuurderId }}" {{ $bestuurder->bestuurderId == $huidigeBestuurder->bestuurderId ? "checked" : ""}}>
+                                        <label class="form-check-label" for="inlineRadio1">{{ $bestuurder->naam }}</label>
+                                    </div>
+                                @endforeach
+
                             </div>
+
+                            {{ method_field('POST') }}
+                            {{ csrf_field() }}
+
                         </form>
+                        <a href="#">Voeg bestuurder toe</a>
                     </div>
                     <div class="row varia-section">
 

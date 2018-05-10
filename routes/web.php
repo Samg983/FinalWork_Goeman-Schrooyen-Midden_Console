@@ -24,10 +24,17 @@ Route::get('/apps', [
     'as' => 'apps'
 ]);
 
-Route::get('/kalender', [
-    'uses' => 'HomeController@kalender_page',
-    'as' => 'kalender'
+
+Route::post('/updateContact', [
+    'uses' => 'ContactController@update',
+    'as' => 'contacts.update'
 ]);
+
+Route::post('/changeDriver', [
+    'uses' => 'HomeController@changeDriver',
+    'as' => 'driver.change'
+]);
+
 
 
 
@@ -43,10 +50,41 @@ Route::group(['prefix' => 'muziek'], function(){
     ]);
 });
 
-Route::get('/navigatie', [
-    'uses' => 'HomeController@navigatie_page',
-    'as' => 'navigatie'
-]);
+Route::group(['prefix' => 'kalender'], function(){
+    Route::get('/', [
+        'uses' => 'AfspraakController@index',
+        'as' => 'kalender'
+    ]);
+
+    Route::get('/morgen', [
+        'uses' => 'AfspraakController@morgen',
+        'as' => 'kalender.morgen'
+    ]);
+
+    Route::get('/overzicht', [
+        'uses' => 'AfspraakController@overzicht',
+        'as' => 'kalender.overzicht'
+    ]);
+});
+
+Route::group(['prefix' => 'navigatie'], function(){
+    Route::get('/', [
+        'uses' => 'NavigatieController@index',
+        'as' => 'navigatie'
+    ]);
+
+    Route::get('/poi', [
+        'uses' => 'NavigatieController@poi',
+        'as' => 'navigatie.poi'
+    ]);
+
+    Route::get('/instellingen', [
+        'uses' => 'NavigatieController@instellingen',
+        'as' => 'navigatie.instellingen'
+    ]);
+});
+
+
 
 Route::get('/stats', [
     'uses' => 'HomeController@stats_page',

@@ -9,6 +9,10 @@
   max-width: 90% !important;
 }
 
+.modal-backdrop.fade.show {
+  opacity: 0.9;
+}
+
 .no-btn {
   background-color: transparent;
   color: $white;

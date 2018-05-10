@@ -1,1 +1,14 @@
 @import "variables";
+
+
+.afspraak {
+  padding: 3%;
+  margin: 1%;
+  background: $gradient;
+  color: $white;
+
+  &:active, &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}

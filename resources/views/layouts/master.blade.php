@@ -32,6 +32,8 @@
 
     @yield("scripts")
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzT6i32NxlhibdCrHO8ZWhy8MfjiGa5L0&libraries=places"
+            async defer></script>
 
     <script src="{{ asset('js/jquery.draggable.js') }}"></script>
 
@@ -57,12 +59,13 @@
     <div id="middle-section">
         @include("partials.nav")
 
-        <div id="middle-content">
+        <div id="middle-content" style="margin-top: 1%">
             @yield("middle-content")
         </div>
     </div>
 
     @include("partials.bottom")
 </div>
+
 </body>
 </html>

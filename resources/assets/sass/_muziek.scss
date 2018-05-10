@@ -5,9 +5,44 @@
   height: 350px;
   overflow-x: hidden;
   overflow-y: auto;
+
+  .active {
+    background-color: $blauw;
+  }
 }
 .track {
   padding: 3%;
   margin: 1%;
   background: $gradient;
+  color: $white;
+
+  &:active, &:hover {
+    color: $white;
+    text-decoration: none;
+  }
 }
+
+.radiozender {
+  background: $gradient;
+  width: 45%;
+  padding: 0;
+  margin:  0 2.5%;
+  margin-bottom: 4%;
+  float: left;
+  box-shadow: 2px 3px 5px rgba(0,0,0, .2);
+
+  img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    object-fit: cover;
+  }
+  p {
+    width: 50%;
+    height: 100%;
+    padding: 15% 5%;
+    text-align: center;
+    float: left;
+  }
+}
+

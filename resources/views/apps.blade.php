@@ -7,7 +7,7 @@
         </div>-->
         <div class="col-12 right-column">
 
-            <div class="row " style="margin-top: 5%">
+            <div class="row">
                 @foreach($apps as $app)
                     <div class="app-card">
                         <img src="{{ asset($app->imgpath) }}"/>

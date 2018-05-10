@@ -30,16 +30,8 @@ class HomeController extends Controller
         return view('apps', ['apps' => $apps]);
     }
 
-    public function kalender_page()
-    {
-        return view('kalender');
-    }
 
 
-    public function navigatie_page()
-    {
-        return view('navigatie');
-    }
 
     public function stats_page()
     {
@@ -59,7 +51,7 @@ class HomeController extends Controller
             ->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July'])
             ->datasets([
                 [
-                    "label" => "Verbruik/maand",
+                    "label" => "Verbruik/maand (# liter)",
                     'backgroundColor' => "rgba(62,120,178,0.3)",
                     'borderColor' => "rgba(62,120,178,0.7)",
                     "pointBorderColor" => "rgba(62,120,178,0.7)",
@@ -118,6 +110,10 @@ class HomeController extends Controller
     public function tel_page()
     {
         return view('telefoon');
+    }
+
+    public function changeDriver(Request $request){
+        return "update driver";
     }
 
 

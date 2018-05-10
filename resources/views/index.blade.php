@@ -61,7 +61,7 @@
                 <div class="col-1 section__padding"><img class="drag-icon" src="img/drag-icon.svg" alt="drag icon">
                 </div>
                 <div class="col-11 section__padding">
-                    <form action="" method="GET" id="suspensionCheck">
+                    <form action="" method="POST" id="suspensionCheck">
                         <div class="form-check">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" name="suspensionMode" id="suspensionMode1"
@@ -103,8 +103,13 @@
                                                     src="{{ asset("img/contacts/".$contact->imgPath) }}"></div>
                             <div class="col-6">{{ $contact->naam }}</div>
                             <div class="col-2"><img src="img/contact-call.svg"></div>
-                            <div class="col-2"><img
-                                        src="{{ $contact->isFavo ? "img/contact-fav-full.svg" : "img/contact-fav.svg" }}">
+                            <div class="col-2">
+                                <form action="{{ route("contacts.update") }}" method="POST">
+                                    <img class="updateContact" src="{{ $contact->isFavo ? "img/contact-fav-full.svg" : "img/contact-fav.svg" }}">
+                                    <input type="hidden"  name="contact" value="{{ $contact->contactId }}">
+                                    {{ csrf_field() }}
+                                    {{ method_field('POST') }}
+                                </form>
                             </div>
                         </div>
                     @endforeach
@@ -123,6 +128,5 @@
 @section("scripts")
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHVcLxTOD5M2zYPnr-mYWtxOdqqEGasaI&callback=initMap"
             async defer></script>
-
 
 @endsection

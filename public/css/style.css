@@ -26,10 +26,28 @@
   float: left;
 }
 
+.afspraak {
+  padding: 3%;
+  margin: 1%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+  color: #fff;
+}
+
+.afspraak:active,
+.afspraak:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .tracks {
   height: 350px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.tracks .active {
+  background-color: #3E78B2;
 }
 
 .track {
@@ -37,6 +55,158 @@
   margin: 1%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
   background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+  color: #fff;
+}
+
+.track:active,
+.track:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.radiozender {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+  width: 45%;
+  padding: 0;
+  margin: 0 2.5%;
+  margin-bottom: 4%;
+  float: left;
+  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.radiozender img {
+  width: 50%;
+  height: 100%;
+  float: left;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.radiozender p {
+  width: 50%;
+  height: 100%;
+  padding: 15% 5%;
+  text-align: center;
+  float: left;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input,
+#destination-input {
+  background-color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 200px;
+}
+
+#origin-input:focus,
+#destination-input:focus {
+  border-color: #4d90fe;
+}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.poi {
+  width: 40%;
+  padding: 3%;
+  margin-left: 2.5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  float: left;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background: #3E78B2;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #3E78B2;
+          box-shadow: 0 0 1px #3E78B2;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 .modal-content {
@@ -46,6 +216,10 @@
 
 .modal-lg {
   max-width: 90% !important;
+}
+
+.modal-backdrop.fade.show {
+  opacity: 0.9;
 }
 
 .no-btn {
@@ -109,7 +283,8 @@ html {
   padding: 1.5%;
 }
 
-#top-section #greeting {
+#top-section #greeting,
+#top-section #time {
   font-size: 1.3em;
 }
 
@@ -122,7 +297,9 @@ html {
 }
 
 .active-nav-left-col {
-  background-color: rgba(255, 255, 255, 0.2);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+  background-color: #3E78B2;
 }
 
 #middle-section {

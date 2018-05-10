@@ -38,7 +38,7 @@ body, html {
   text-align: center;
   padding: 1.5%;
 
-  #greeting {
+  #greeting, #time {
     font-size: 1.3em;
   }
   a {
@@ -51,9 +51,8 @@ body, html {
 }
 
 .active-nav-left-col {
-
-  background-color: rgba(255,255,255,0.2);
-
+  background: $gradient;
+  background-color: $blauw;
 }
 
 #middle-section {
