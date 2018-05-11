@@ -7,6 +7,11 @@
   background: $gradient;
   color: $white;
 
+
+  small {
+    float: right;
+  }
+
   &:active, &:hover {
     color: $white;
     text-decoration: none;

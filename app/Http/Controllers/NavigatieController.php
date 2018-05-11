@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Instelling;
 use App\POI;
 use Illuminate\Http\Request;
 
@@ -17,6 +18,9 @@ class NavigatieController extends Controller
     }
 
     public function instellingen(){
-        return view('navigatie.instellingen');
+
+        $instellingen = Instelling::where("categorie", "=", "nav")->get();
+
+        return view('navigatie.instellingen',['instellingen' => $instellingen]);
     }
 }
