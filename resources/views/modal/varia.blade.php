@@ -16,9 +16,12 @@
                             <div class="form-row">
                                 @foreach($bestuurders as $bestuurder)
                                     <div class="form-check form-check-inline col-md-4">
-                                        <input class="form-check-input profileInput" type="radio" name="profile" id="profile{{ $bestuurder->bestuurderId }}" title="{{ $bestuurder->bestuurderId }}"
+                                        <input class="form-check-input profileInput" type="radio" name="profile"
+                                               id="profile{{ $bestuurder->bestuurderId }}"
+                                               title="{{ $bestuurder->bestuurderId }}"
                                                value="{{ $bestuurder->bestuurderId }}" {{ $bestuurder->bestuurderId == $huidigeBestuurder->bestuurderId ? "checked" : ""}}>
-                                        <label class="form-check-label" for="inlineRadio1">{{ $bestuurder->naam }}</label>
+                                        <label class="form-check-label"
+                                               for="inlineRadio1">{{ $bestuurder->naam }}</label>
                                     </div>
                                 @endforeach
 
@@ -28,18 +31,16 @@
                             {{ csrf_field() }}
 
                         </form>
-                        <a href="#">Voeg bestuurder toe</a>
+                        <a class="col-12 addDriver" href="#">Voeg bestuurder toe</a>
                     </div>
                     <div class="row varia-section">
 
 
                         <h2 class="col-12">Instellingen</h2>
-                        <div class="col-4">eee</div>
-                        <div class="col-4">eee</div>
-                        <div class="col-4">eee</div>
-                        <div class="col-4">eee</div>
-                        <div class="col-4">eee</div>
-                        <div class="col-4">eee</div>
+
+                        @foreach($instellingenCar as $instelling)
+                            <div class="instelling">{{ $instelling->naam }}</div>
+                        @endforeach
 
                     </div>
                     <div class="row varia-section">

@@ -1,4 +1,4 @@
-#middle-section .app-card {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);#middle-section .app-card {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
   background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
   width: 45%;
@@ -42,6 +42,12 @@
 .afspraak:hover {
   color: #fff;
   text-decoration: none;
+}
+
+.appointments {
+  height: 750px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .tracks {
@@ -213,6 +219,19 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.logo-apple {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 30%;
+  display: block;
+}
+
+.text-apple {
+  display: block;
+  color: #828282;
+  text-align: center;
+}
+
 .modal-content {
   background-color: transparent;
   border: 0;
@@ -254,8 +273,12 @@ input:checked + .slider:before {
 
 body,
 html {
-  background-color: black;
+  height: 100%;
   overflow: hidden;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .first-div {
@@ -311,7 +334,7 @@ html {
 }
 
 #middle-section #nav {
-  padding: 2%;
+  padding: 4%;
   text-align: center;
   background: radial-gradient(ellipse at top, rgba(255, 255, 255, 0.25), transparent);
 }
@@ -320,8 +343,9 @@ html {
   opacity: 0.4;
 }
 
-#middle-section #nav #map {
-  height: 100%;
+#middle-section #nav .icon img {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 
 #middle-section #middle-content {
@@ -436,4 +460,87 @@ input[type="radio"]:checked {
 .gmnoprint div {
   background: none !important;
 }
+
+.instelling {
+  width: 31%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 126, 126, 0.2)), to(rgba(17, 17, 17, 0.9)));
+  background: linear-gradient(to bottom, rgba(126, 126, 126, 0.2), rgba(17, 17, 17, 0.9));
+  padding: 5%;
+}
+
+.modal-body h2 {
+  margin-bottom: 5%;
+}
+
+.addDriver {
+  color: #fff;
+  margin-top: 5%;
+}
+
+#tempLeft {
+  margin-left: 10%;
+  font-size: 1.3em;
+}
+
+#tempRight {
+  margin-right: 10%;
+  font-size: 1.3em;
+}
+
+.geluid {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-animation: fadein 0.5s;
+  /* Safari, Chrome and Opera > 12.1 */
+  /* Firefox < 16 */
+  /* Internet Explorer */
+  /* Opera < 12.1 */
+  animation: fadein 0.5s;
+}
+
+.geluid #geluid {
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  width: 30%;
+  background-color: #fff;
+  padding: 5%;
+  border-radius: 15px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+
+/* Safari, Chrome and Opera > 12.1 */
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+
+/* Opera < 12.1 */
 

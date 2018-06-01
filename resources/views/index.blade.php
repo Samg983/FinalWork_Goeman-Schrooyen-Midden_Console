@@ -45,9 +45,9 @@
                     <h2>Crazy</h2>
                     <p>Gnarls Barkley</p>
                     <div class="row">
-                        <div class="col player"><img src="img/music-back.svg"></div>
+                        <div class="col player music-back"><img src="img/music-back.svg"></div>
                         <div class="col player"><img src="img/music-play.svg"></div>
-                        <div class="col player"><img src="img/music-forward.svg"></div>
+                        <div class="col player music-forward"><img src="img/music-forward.svg"></div>
                     </div>
 
                 </div>
@@ -105,8 +105,9 @@
                             <div class="col-2"><img src="img/contact-call.svg"></div>
                             <div class="col-2">
                                 <form action="{{ route("contacts.update") }}" method="POST">
-                                    <img class="updateContact" src="{{ $contact->isFavo ? "img/contact-fav-full.svg" : "img/contact-fav.svg" }}">
-                                    <input type="hidden"  name="contact" value="{{ $contact->contactId }}">
+                                    <img class="updateContact"
+                                         src="{{ $contact->isFavo ? "img/contact-fav-full.svg" : "img/contact-fav.svg" }}">
+                                    <input type="hidden" name="contact" value="{{ $contact->contactId }}">
                                     {{ csrf_field() }}
                                     {{ method_field('POST') }}
                                 </form>
@@ -123,10 +124,7 @@
 
 
 
-@endsection
-
-@section("scripts")
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHVcLxTOD5M2zYPnr-mYWtxOdqqEGasaI&callback=initMap"
-            async defer></script>
 
 @endsection
+
+

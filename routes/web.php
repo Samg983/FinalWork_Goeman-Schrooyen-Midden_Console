@@ -24,6 +24,11 @@ Route::get('/apps', [
     'as' => 'apps'
 ]);
 
+Route::get('/projectie', [
+    'uses' => 'HomeController@projectie',
+    'as' => 'projectie'
+]);
+
 
 Route::post('/updateContact', [
     'uses' => 'ContactController@update',

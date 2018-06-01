@@ -1,11 +1,19 @@
+let interval = 1000;  // 1000 = 1 second, 3000 = 3 seconds
+let prevCount;
+let $computerIP = "192.168.0.134";
+let $raspberryIP = "192.168.0.179";
+let bar;
 $(document).ready(function () {
     console.log(Cookies.getJSON());
 
     startTime();
+    setTimeout(getRapport, interval);
+    createCircularVolume();
+
+
     let $musicBlock = $(".music-block");
     let $navBlock = $(".nav-block");
     let musicBlockPos, navBlockPos;
-
 
     if (musicBlockPos = Cookies.getJSON("musicBlock")) {
         $musicBlock.css({
@@ -80,18 +88,17 @@ $(document).ready(function () {
     $(".small-blocks").sortable();
 
     $('input[type=radio]').click(function () {
-        $("#changeProfile").submit();
+        //$("#changeProfile").submit();
     });
 
 
-    if(Cookies.getJSON("musicTrack")){
+    if (Cookies.getJSON("musicTrack")) {
         console.log(Cookies.getJSON("musicTrack"));
         setTrack(Cookies.getJSON("musicTrack"));
     }
 
     $(".track").click(function (e) {
         e.preventDefault();
-
 
         $data = $(this).data("content");
 
@@ -100,40 +107,44 @@ $(document).ready(function () {
     });
 
 
-
-
-
-
-
     $(".updateContact").on("click", function () {
         $(this).closest("form").submit();
     });
 
+    $(".not-imp").click(function () {
+
+        if ($data = $(this).data("message")) {
+            console.log($data);
+            alert($data);
+        } else {
+            alert("Not implemented yet");
+        }
+
+    });
 
     initMap();
 
 
 });
 
-function jsonEqual(a,b) {
+function jsonEqual(a, b) {
     return JSON.stringify(a) === JSON.stringify(b);
 }
 
-function setTrack($data){
+function setTrack($data) {
 
     $track = $(".track");
     $track.removeClass("active");
 
-    $track.each(function(){
+    $track.each(function () {
 
-        if(jsonEqual($(this).data("content"), $data)){
-           $(this).addClass("active");
+        if (jsonEqual($(this).data("content"), $data)) {
+            $(this).addClass("active");
         }
     });
 
 
     Cookies.set("musicTrack", $data);
-
 
 
     $(".playerAuthor").html($data.auteur);
@@ -351,6 +362,115 @@ function initMap() {
 
     new AutocompleteDirectionsHandler(map);
 }
+
+
+function getRapport() {
+    $.ajax({
+        type: 'GET',
+        url: 'http://' + $raspberryIP + ':8080/Rapport/getRapport',
+        dataType: 'json',
+        success: function (data) {
+            checkButtonCounter(data.buttonCounter);
+            setTemp(data.temperatuurLinks);
+            checkVolume(data.temperatuurLinks);
+        },
+        complete: function (data) {
+            setTimeout(getRapport, interval);
+        }
+    });
+}
+
+function checkButtonCounter(count) {
+    let oldCount = Cookies.get("buttonCounter");
+
+    if (parseInt(count) !== parseInt(oldCount)) {
+        Cookies.set("buttonCounter", count);
+        window.location.replace("http://" + $computerIP + "/car-dash/public");
+    }
+}
+
+function checkVolume(value) {
+    let oldValue = Cookies.get("vol");
+    let $geluid = $(".geluid");
+
+    if (parseInt(value) >= (parseInt(oldValue) + 5) || parseInt(value) <= (parseInt(oldValue) - 5)) {
+
+        Cookies.set("vol", value);
+
+
+        $geluid.css("opacity", 1);
+        $geluid.css("display", "block");
+
+        drawVolume(mapNumber(value, 0, 255, 0, 100));
+
+    }
+}
+
+function setTemp(left) {
+    let tempLeft = mapNumber(left, 0, 255, 16, 28);
+    //let tempRight = mapNumber(right, 0, 255, 16, 28);
+
+
+    $("#tempLeft").html(tempLeft.toFixed(1) + "°C");
+    $("#tempRight").html(tempLeft.toFixed(1) + "°C");
+}
+
+function mapNumber(val, in_min, in_max, out_min, out_max) {
+    //https://gist.github.com/xposedbones/75ebaef3c10060a3ee3b246166caab56
+    return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+function drawVolume(e) {
+    let volume = e / 100;
+
+    bar.setText(Math.round(e));
+
+    bar.animate(volume.toFixed(1), {}, function(){
+        setTimeout(
+            function () {
+                $(".geluid").css("display", "none");
+            }, 5000);
+    });
+
+
+}
+
+function createCircularVolume() {
+    bar = new ProgressBar.Circle("#geluid", {
+        color: '#aaa',
+        // This has to be the same size as the maximum width to
+        // prevent clipping
+        strokeWidth: 4,
+        trailWidth: 2,
+        text: {
+            autoStyleContainer: false
+        },
+        from: {color: '#aaa', width: 2},
+        to: {color: '#333', width: 4},
+        // Set default step function for all animate calls
+        step: function (state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('stroke-width', state.width);
+
+            console.log(circle.value());
+
+            let value = circle.value() * 100;
+            if (value === 0) {
+                circle.setText('0');
+            } else {
+                circle.setText(Math.round(value));
+            }
+
+        },
+        warnings: true
+    });
+
+    bar.text.style.fontFamily = '"Open Sans", sans-serif';
+    bar.text.style.fontSize = '2rem';
+
+
+}
+
 
 /**
  * @constructor

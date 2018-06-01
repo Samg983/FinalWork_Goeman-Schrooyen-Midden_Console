@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
 
         $contacts = Contact::all()->take(3);
-        $nummers = Muzieknummer::paginate(1);
+        $nummers = Muzieknummer::all();
         return view('index', ['contacts' => $contacts, 'nummers' => $nummers]);
     }
 
@@ -114,6 +114,10 @@ class HomeController extends Controller
 
     public function changeDriver(Request $request){
         return "update driver";
+    }
+
+    public function projectie(){
+        return view('projectie.index');
     }
 
 

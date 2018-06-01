@@ -19,7 +19,11 @@ class AfspraakController extends Controller
     }
 
     public function morgen() {
-        return view('afspraak.morgen');
+
+        $tomorrow = Carbon::tomorrow();
+        $afspraken = Afspraak::whereDate("datum", "=", $tomorrow->format('Y-m-d'))->get();
+
+        return view('afspraak.morgen', ['afspraken' => $afspraken]);
     }
 
     public function overzicht(){

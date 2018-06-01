@@ -35,6 +35,8 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzT6i32NxlhibdCrHO8ZWhy8MfjiGa5L0&libraries=places"
             async defer></script>
 
+    <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+
     <script src="{{ asset('js/jquery.draggable.js') }}"></script>
 
     <script src="{{ asset('js/main.js') }}"></script>
@@ -49,6 +51,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -63,7 +69,7 @@
             @yield("middle-content")
         </div>
     </div>
-
+    @include("partials.geluid")
     @include("partials.bottom")
 </div>
 
