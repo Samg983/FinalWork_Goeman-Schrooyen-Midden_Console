@@ -11,7 +11,7 @@
                         </button>
                     </div>
                     <div class="row varia-section">
-                        <h2 class="col-12">Profielen</h2>
+                        <h2 class="col-12">Bestuurders <span> <a class="col-12 addDriver" href="#">Voeg bestuurder toe</a></span></h2>
                         <form id="changeProfile" class="col-12" action="{{ route("driver.change") }}" method="post">
                             <div class="form-row">
                                 @foreach($bestuurders as $bestuurder)
@@ -31,7 +31,7 @@
                             {{ csrf_field() }}
 
                         </form>
-                        <a class="col-12 addDriver" href="#">Voeg bestuurder toe</a>
+
                     </div>
                     <div class="row varia-section">
 

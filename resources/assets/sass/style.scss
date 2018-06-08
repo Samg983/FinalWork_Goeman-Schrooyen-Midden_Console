@@ -16,6 +16,11 @@ body, html {
   background-color: black;
   font-family: 'Open Sans', sans-serif;
 }
+
+hr {
+  border-color: $white;
+  opacity: 0.3;
+}
 .first-div {
   max-width: 100%;
   overflow: hidden;
@@ -94,6 +99,12 @@ body, html {
     }
   }
 
+  .contacts-block {
+    h5 {
+      margin-left: 5%;
+    }
+  }
+
   .img-contact {
     width: 40px;
     height: 40px;
@@ -123,7 +134,7 @@ body, html {
 
 
   #player {
-    margin-top: 6%;
+    margin-top: 4%;
   }
   #suspensionCheck {
     margin-left: 15%;
@@ -133,9 +144,15 @@ body, html {
     margin: 10% 0;
   }
 
+  .music-controls {
+    margin-bottom: 4%;
+  }
 
+  .source {
 
+    margin-top: 5%;
 
+  }
 
   .no-margin {
     margin: 0;
@@ -144,9 +161,8 @@ body, html {
 }
 
 input[type="radio"] {
-
   &:checked {
-    background-color: $black;
+    background-color: $blauw;
   }
 }
 .nav-block .row {
@@ -215,10 +231,7 @@ input[type="radio"] {
   margin-bottom: 5%;
 }
 
-.addDriver {
-  color: $white;
-  margin-top: 5%;
-}
+
 
 #tempLeft {
   margin-left: 10%;

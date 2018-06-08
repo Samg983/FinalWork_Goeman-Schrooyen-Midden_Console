@@ -75,88 +75,74 @@ module.exports = __webpack_require__(2);
 /* 1 */
 /***/ (function(module, exports) {
 
-var interval = 1000; // 1000 = 1 second, 3000 = 3 seconds
 var prevCount = void 0;
+
+//Aanpassen naargelang het wifi netwerk waarop je zit!!!!
 var $computerIP = "192.168.0.134";
 var $raspberryIP = "192.168.0.179";
+var interval = 500; // 1000 = 1 second, 3000 = 3 seconds
 var bar = void 0;
+var musicBlockPos = void 0,
+    navBlockPos = void 0,
+    contactsBlockPos = void 0,
+    susBlockPos = void 0;
+var $musicBlock = void 0,
+    $navBlock = void 0,
+    $contactsBlock = void 0,
+    $susBlock = void 0;
+var oldValue = 0;
+var oldVolValue = 0;
+
 $(document).ready(function () {
-    console.log(Cookies.getJSON());
+    //console.log(Cookies.getJSON());
+
 
     startTime();
     setTimeout(getRapport, interval);
     createCircularVolume();
 
-    var $musicBlock = $(".music-block");
-    var $navBlock = $(".nav-block");
-    var musicBlockPos = void 0,
-        navBlockPos = void 0;
+    $musicBlock = $(".music-block");
+    $navBlock = $(".nav-block");
+    $contactsBlock = $(".contacts-block");
+    $susBlock = $(".suspension-block");
 
-    if (musicBlockPos = Cookies.getJSON("musicBlock")) {
-        $musicBlock.css({
-            top: musicBlockPos.top,
-            left: musicBlockPos.left
-        });
-    }
-
-    if (navBlockPos = Cookies.getJSON("navBlock")) {
-        console.log("top nav " + navBlockPos.top);
-
-        $navBlock.css({
-            top: navBlockPos.top,
-            left: navBlockPos.left
-        });
-    }
-
-    $('#variaModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var recipient = button.data('whatever'); // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this);
-        modal.find('.modal-title').text('New message to ' + recipient);
-        modal.find('.modal-body input').val(recipient);
-    });
+    checkPositionBlocks("static");
 
     $(".large-blocks").sortable({
         update: function update(e, ui) {
             console.log("update");
 
-            console.log($musicBlock.position());
-            console.log($navBlock.position());
-
             Cookies.remove("musicBlock");
             Cookies.remove("navBlock");
-            /*Cookies.set("musicBlock", $musicBlock.position());
-            Cookies.set("navBlock", $navBlock.position());*/
 
-            if (musicBlockPos = Cookies.getJSON("musicBlock")) {
-                console.log("musicBlockPos");
-                console.log(musicBlockPos.top);
-                console.log(musicBlockPos.left);
+            Cookies.set("musicBlock", $musicBlock.position());
+            Cookies.set("navBlock", $navBlock.position());
 
-                $musicBlock.css({
-                    top: musicBlockPos.top,
-                    left: musicBlockPos.left
-                });
-            }
-
-            if (navBlockPos = Cookies.getJSON("navBlock")) {
-                console.log("navBlockPos");
-                console.log(navBlockPos.top);
-                console.log(navBlockPos.left);
-
-                $navBlock.css({
-                    top: navBlockPos.top,
-                    left: navBlockPos.left
-                });
-            }
-
-            console.log(Cookies.getJSON("musicBlock"));
-            console.log(Cookies.getJSON("navBlock"));
+            checkPositionBlocks("absolute");
+            // console.log(Cookies.getJSON("musicBlock"));
+            // console.log(Cookies.getJSON("navBlock"));
+        },
+        stop: function stop(e, ui) {
+            console.log('stop');
+            checkPositionBlocks("static");
         }
     });
-    $(".small-blocks").sortable();
+
+    $(".small-blocks").sortable({
+        update: function update(e, ui) {
+            Cookies.remove("contactsBlock");
+            Cookies.remove("susBlock");
+
+            Cookies.set("contactsBlock", $contactsBlock.position());
+            Cookies.set("susBlock", $susBlock.position());
+
+            checkPositionBlocks("absolute");
+        },
+        stop: function stop(e, ui) {
+            console.log('stop');
+            checkPositionBlocks("static");
+        }
+    });
 
     $('input[type=radio]').click(function () {
         //$("#changeProfile").submit();
@@ -185,12 +171,58 @@ $(document).ready(function () {
             console.log($data);
             alert($data);
         } else {
-            alert("Not implemented yet");
+            alert("Niet geïmplementeerd omwille van prototype");
         }
+    });
+
+    $('#variaModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget); // Button that triggered the modal
+        var recipient = button.data('whatever'); // Extract info from data-* attributes
+        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+        var modal = $(this);
+        modal.find('.modal-title').text('New message to ' + recipient);
+        modal.find('.modal-body input').val(recipient);
     });
 
     initMap();
 });
+
+function checkPositionBlocks(position) {
+    if (musicBlockPos = Cookies.getJSON("musicBlock")) {
+        $musicBlock.css({
+            top: musicBlockPos.top,
+            left: musicBlockPos.left,
+            position: position
+        });
+    }
+
+    if (navBlockPos = Cookies.getJSON("navBlock")) {
+        $navBlock.css({
+            top: navBlockPos.top,
+            left: navBlockPos.left,
+            position: position
+        });
+    }
+
+    if (contactsBlockPos = Cookies.getJSON("contactsBlock")) {
+        console.log(contactsBlockPos);
+        $contactsBlock.css({
+            top: contactsBlockPos.top,
+            left: contactsBlockPos.left,
+            position: position
+        });
+    }
+
+    if (susBlockPos = Cookies.getJSON("susBlock")) {
+        console.log(susBlockPos);
+        $susBlock.css({
+            top: susBlockPos.top,
+            left: susBlockPos.left,
+            position: position
+        });
+    }
+}
 
 function jsonEqual(a, b) {
     return JSON.stringify(a) === JSON.stringify(b);
@@ -374,9 +406,15 @@ function getRapport() {
         url: 'http://' + $raspberryIP + ':8080/Rapport/getRapport',
         dataType: 'json',
         success: function success(data) {
-            checkButtonCounter(data.buttonCounter);
-            setTemp(data.temperatuurLinks);
-            checkVolume(data.temperatuurLinks);
+            console.log(data);
+
+            checkButtonCounter(data.homeCounter);
+
+            if (parseInt(data.volume) !== 128) {
+
+                checkVolume(data.volume);
+                setTemp(data.temperatuurLinks);
+            }
         },
         complete: function complete(data) {
             setTimeout(getRapport, interval);
@@ -394,12 +432,16 @@ function checkButtonCounter(count) {
 }
 
 function checkVolume(value) {
-    var oldValue = Cookies.get("vol");
+
     var $geluid = $(".geluid");
 
-    if (parseInt(value) >= parseInt(oldValue) + 5 || parseInt(value) <= parseInt(oldValue) - 5) {
+    if (Cookies.get("vol")) {
+        oldVolValue = Math.round(Cookies.get("vol"));
+    }
 
-        Cookies.set("vol", value);
+    if (parseInt(value) >= parseInt(oldVolValue) + 8 || parseInt(value) <= parseInt(oldVolValue) - 8) {
+
+        Cookies.set("vol", Math.round(value));
 
         $geluid.css("opacity", 1);
         $geluid.css("display", "block");
@@ -409,12 +451,21 @@ function checkVolume(value) {
 }
 
 function setTemp(left) {
-    var tempLeft = mapNumber(left, 0, 255, 16, 28);
-    //let tempRight = mapNumber(right, 0, 255, 16, 28);
 
+    if (Cookies.get("oldTemp")) {
 
-    $("#tempLeft").html(tempLeft.toFixed(1) + "°C");
-    $("#tempRight").html(tempLeft.toFixed(1) + "°C");
+        oldValue = parseInt(Cookies.get("oldTemp")).toFixed(1);
+        console.log("oldvalue " + oldValue);
+    }
+
+    if (parseInt(left) >= oldValue + 8 || parseInt(left) <= oldValue - 8) {
+        console.log("ja");
+
+        Cookies.set("oldTemp", left);
+
+        $("#tempLeft").html(mapNumber(left, 0, 255, 16, 28).toFixed(1) + "°C");
+        $("#tempRight").html(mapNumber(left, 0, 255, 16, 28).toFixed(1) + "°C");
+    }
 }
 
 function mapNumber(val, in_min, in_max, out_min, out_max) {
@@ -450,8 +501,6 @@ function createCircularVolume() {
         step: function step(state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('stroke-width', state.width);
-
-            console.log(circle.value());
 
             var value = circle.value() * 100;
             if (value === 0) {

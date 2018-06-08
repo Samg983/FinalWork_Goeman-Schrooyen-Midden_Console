@@ -9,7 +9,7 @@
 
                 <p class="col-12 afspraak">
                     {{  Carbon\Carbon::parse($afspraak->datum)->format("D d M Y") }} - {{ $afspraak->beschrijving }}
-                    {!! $afspraak->adres ? "<small>Get directions</small>" : "" !!}
+                    {!! $afspraak->adres ? "<small>Start navigatie</small>" : "" !!}
                 </p>
 
 

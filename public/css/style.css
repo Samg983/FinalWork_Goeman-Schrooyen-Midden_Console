@@ -271,6 +271,18 @@ input:checked + .slider:before {
   padding: 5%;
 }
 
+.addDriver {
+  color: #E0E0E0;
+  margin-top: 5%;
+  opacity: 0.5;
+  font-size: 0.5em;
+}
+
+.close {
+  color: #fff;
+  opacity: 1;
+}
+
 body,
 html {
   height: 100%;
@@ -279,6 +291,11 @@ html {
   position: fixed;
   background-color: black;
   font-family: 'Open Sans', sans-serif;
+}
+
+hr {
+  border-color: #fff;
+  opacity: 0.3;
 }
 
 .first-div {
@@ -366,6 +383,10 @@ html {
   width: 100%;
 }
 
+#middle-section .contacts-block h5 {
+  margin-left: 5%;
+}
+
 #middle-section .img-contact {
   width: 40px;
   height: 40px;
@@ -395,7 +416,7 @@ html {
 }
 
 #middle-section #player {
-  margin-top: 6%;
+  margin-top: 4%;
 }
 
 #middle-section #suspensionCheck {
@@ -406,12 +427,20 @@ html {
   margin: 10% 0;
 }
 
+#middle-section .music-controls {
+  margin-bottom: 4%;
+}
+
+#middle-section .source {
+  margin-top: 5%;
+}
+
 #middle-section .no-margin {
   margin: 0;
 }
 
 input[type="radio"]:checked {
-  background-color: #000;
+  background-color: #3E78B2;
 }
 
 .heat {
@@ -472,11 +501,6 @@ input[type="radio"]:checked {
 
 .modal-body h2 {
   margin-bottom: 5%;
-}
-
-.addDriver {
-  color: #fff;
-  margin-top: 5%;
 }
 
 #tempLeft {

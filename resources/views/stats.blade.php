@@ -9,10 +9,8 @@
             {!! $chart->render() !!}
         </div>
 
-        <div class="col-6" style="margin-top: 5%">
-            {!! $chart2->render() !!}
-        </div>
-        <div class="col-6" style="margin-top: 5%">
+
+        <div class="col-12" style="margin-top: 5%">
             {!! $chart3->render() !!}
         </div>
     </div>

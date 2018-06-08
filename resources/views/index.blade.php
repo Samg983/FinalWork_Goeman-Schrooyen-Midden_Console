@@ -32,6 +32,7 @@
                         </div>
                     </form>
                 </div>
+
             </div>
         </div>
 
@@ -44,13 +45,20 @@
                 <div id="player" class="col-8 section__padding text-center">
                     <h2>Crazy</h2>
                     <p>Gnarls Barkley</p>
-                    <div class="row">
+                    <div class="row music-controls">
                         <div class="col player music-back"><img src="img/music-back.svg"></div>
                         <div class="col player"><img src="img/music-play.svg"></div>
                         <div class="col player music-forward"><img src="img/music-forward.svg"></div>
                     </div>
+                    <hr>
+                    <div class="row source">
+                        <div class="col-4">Radio</div>
+                        <div class="col-4 active-nav-left-col">Spotify</div>
+                        <div class="col-4">Smartphone</div>
+                    </div>
 
                 </div>
+
             </div>
         </div>
     </div>
@@ -97,12 +105,14 @@
                 <div class="col-1 section__padding"><img class="drag-icon" src="img/drag-icon.svg" alt="drag icon">
                 </div>
                 <div class="col-11 section__padding">
+                    <h5><b>Recent</b></h5>
                     @foreach($contacts as $contact)
                         <div class="row contact-person">
+
                             <div class="col-2"><img class="img-contact"
                                                     src="{{ asset("img/contacts/".$contact->imgPath) }}"></div>
                             <div class="col-6">{{ $contact->naam }}</div>
-                            <div class="col-2"><img src="img/contact-call.svg"></div>
+                            <div class="col-2 not-imp"><img src="img/contact-call.svg"></div>
                             <div class="col-2">
                                 <form action="{{ route("contacts.update") }}" method="POST">
                                     <img class="updateContact"

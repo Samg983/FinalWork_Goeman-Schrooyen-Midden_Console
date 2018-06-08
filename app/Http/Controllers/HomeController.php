@@ -45,7 +45,7 @@ class HomeController extends Controller
 
     private function generateBarChart(){
         $chartjs = app()->chartjs
-            ->name('lineChartTest')
+            ->name('consumption')
             ->type('line')
             ->size(['width' => 400, 'height' => 200])
             ->labels(['January', 'February', 'March', 'April', 'May', 'June', 'July'])
@@ -68,19 +68,19 @@ class HomeController extends Controller
 
     private function generateBarChart2(){
         $chartjs = app()->chartjs
-            ->name('barChartTest')
+            ->name('barChart')
             ->type('bar')
             ->size(['width' => 400, 'height' => 200])
             ->labels(['Label x', 'Label y'])
             ->datasets([
                 [
                     "label" => "My First dataset",
-                    'backgroundColor' => ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+                    'backgroundColor' => ['rgb(255, 100, 132)', 'rgb(54, 162, 235)'],
                     'data' => [69, 59]
                 ],
                 [
-                    "label" => "My First dataset",
-                    'backgroundColor' => ['rgba(255, 99, 132, 0.3)', 'rgba(54, 162, 235, 0.3)'],
+                    "label" => "My second dataset",
+                    'backgroundColor' => [ 'rgb(54, 162, 235)','rgb(255, 100, 132)'],
                     'data' => [65, 12]
                 ]
             ])
@@ -91,15 +91,15 @@ class HomeController extends Controller
 
     private function generateBarChart3(){
         $chartjs = app()->chartjs
-            ->name('pieChartTest')
+            ->name('pieChart')
             ->type('pie')
-            ->size(['width' => 400, 'height' => 200])
-            ->labels(['Label x', 'Label y'])
+            ->size(['width' => 400, 'height' => 175])
+            ->labels(['Bram', 'Sam'])
             ->datasets([
                 [
-                    'backgroundColor' => ['#FF6384', '#36A2EB'],
-                    'hoverBackgroundColor' => ['#FF6384', '#36A2EB'],
-                    'data' => [69, 59]
+                    "label" => "Aantal ritten per bestuurder",
+                    'backgroundColor' => ['#3E78B2', '#E9B872'],
+                    'data' => [10, 8]
                 ]
             ])
             ->options([]);
